@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkest: #2e2e33;
+  --dark: #494749;
+  --background: #f1f1f1;
+  --primary: #96031a;
+  --secondary: #faa916;
+}
+
+body {
+  min-height: 800px;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  color: var(--darkest);
+  background-color: var(--background);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
+}

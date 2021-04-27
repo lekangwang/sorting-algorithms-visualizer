@@ -5,80 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorting Algorithm Visualizer</title>
+    <!--CSS styles-->
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/visualizer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
     <header class="controls">
-      <nav class="controls-nav">
-        <div class="controls-nav-generate-container">
+      <div class="controls-generate-container">
+        <div>
           <button id="generate-array-btn" class="primary-btn">
             Generate new array
           </button>
         </div>
-        <div class="controls-nav-parameters-container">
-          <div class="controls-nav-parameters-stack">
-            <h3># of array elements</h3>
-            <input
-              type="number"
-              name="array-size"
-              class="primary-input"
-              id="array-size-input"
-              value="10"
-              max="300"
-              min="5"
-              required
-            />
-          </div>
-          <div class="controls-nav-parameters-stack">
-            <h3>Sort speed (higher is faster)</h3>
-            <input
-              type="number"
-              name="sort-speed"
-              class="primary-input"
-              id="sort-speed-input"
-              value="3"
-              min="1"
-              max="5"
-              required
-            />
-          </div>
+      </div>
+      <div class="controls-parameters-container">
+        <div class="controls-parameters-stack">
+          <p>Number of array elements</p>
+          <input
+            type="number"
+            name="array-size"
+            class="primary-input"
+            id="array-size-input"
+            value="10"
+            max="300"
+            min="5"
+            required
+          />
         </div>
-        <div class="controls-nav-algorithm-container">
-          <div>
-            <button id="bubble-sort-btn" class="secondary-btn">
-              Bubble Sort
-            </button>
-          </div>
-          <div>
-            <button id="insertion-sort-btn" class="secondary-btn">
-              Insertion Sort
-            </button>
-          </div>
-          <div>
-            <button id="quick-sort-btn" class="secondary-btn">
-              Quick Sort
-            </button>
-          </div>
-          <div>
-            <button id="merge-sort-btn" class="secondary-btn">
-              Merge Sort
-            </button>
-          </div>
-          <div>
-            <button id="heap-sort-btn" class="secondary-btn">Heap Sort</button>
-          </div>
+        <div class="controls-parameters-stack">
+          <p>Sort speed (higher is faster)</p>
+          <input
+            type="number"
+            name="sort-speed"
+            class="primary-input"
+            id="sort-speed-input"
+            value="3"
+            min="1"
+            max="5"
+            required
+          />
         </div>
-        <div class="controls-nav-start-container">
+      </div>
+      <div class="controls-algorithm-container">
+        <div>
+          <button id="bubble-sort-btn" class="secondary-btn">
+            Bubble Sort
+          </button>
+        </div>
+        <div>
+          <button id="insertion-sort-btn" class="secondary-btn">
+            Insertion Sort
+          </button>
+        </div>
+        <div>
+          <button id="quick-sort-btn" class="secondary-btn">Quick Sort</button>
+        </div>
+        <div>
+          <button id="merge-sort-btn" class="secondary-btn">Merge Sort</button>
+        </div>
+        <div>
+          <button id="heap-sort-btn" class="secondary-btn">Heap Sort</button>
+        </div>
+      </div>
+    </header>
+    <main class="visualizer">
+      <div class="visualizer-container">
+        <div id="visualizer-bar-container"></div>
+        <div class="visualizer-controls-container">
           <div><button class="primary-btn" id="start-btn">Sort!</button></div>
           <div><button class="primary-btn" id="stop-btn">Stop</button></div>
           <div><button class="primary-btn" id="reset-btn">Reset</button></div>
         </div>
-      </nav>
-    </header>
-    <main class="visualizer">
-      <div id="visualizer-container"></div>
+      </div>
     </main>
-    <footer id="footer">
+    <footer>
       <p>Le Kang Wang &copy; 2021</p>
     </footer>
+
+    <!--JS Scripts-->
   </body>
 </html>

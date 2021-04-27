@@ -1,0 +1,46 @@
+.primary-btn {
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--darkest);
+  font-family: Roboto, sans-serif;
+  background: var(--secondary);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: 20ms ease;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(to top right, #666666, #000000);
+  color: var(--secondary);
+}
+
+.primary-btn:active {
+  transform: translateY(5px);
+}
+
+.secondary-btn {
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  border: 2px solid black;
+  box-shadow: 0 0.5rem var(--secondary);
+  transition: 0.05s ease;
+}
+
+.secondary-btn:hover {
+  background: black;
+  color: white;
+}
+
+.secondary-btn:active {
+  box-shadow: 0 0;
+  transform: translateY(0.5rem);
+  background: black;
+  color: white;
+}
+
+.pressed {
+  box-shadow: 0 0;
+  transform: translateY(0.5rem);
+  background: black;
+  color: white;
+}

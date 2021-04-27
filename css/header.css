@@ -1,0 +1,44 @@
+.controls {
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--dark);
+  color: var(--background);
+}
+
+.controls-generate-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.controls-parameters-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 3;
+}
+
+.controls-parameters-stack {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 0.5rem;
+}
+
+.controls-algorithm-container {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 1rem;
+}
+
+.primary-input {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+}
