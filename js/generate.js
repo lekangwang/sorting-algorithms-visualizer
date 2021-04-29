@@ -9,7 +9,6 @@ function generateArray() {
     let obj = {
       value: Math.floor(Math.random() * (max - min)) + min,
       isSorted: false,
-      id: i,
       class: "",
     };
     barArr.push(obj);
