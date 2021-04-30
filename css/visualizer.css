@@ -30,7 +30,6 @@
 
 .bar-background {
   background-color: #7e97ad;
-  padding: 10px;
   color: white;
 }
 
@@ -41,12 +40,25 @@
   gap: 2rem;
 }
 
-.green-background {
+.green {
   background-color: #90ee90;
+  color: black;
 }
-.red-background {
+.red {
   background-color: #ff6961;
+  color: black;
 }
-.purple-background {
+
+.yellow {
+  background-color: khaki;
+  color: black;
+}
+
+.purple {
   background-color: #b48fd9;
+}
+
+.blue {
+  background-color: #7e97ad;
+  color: white;
 }

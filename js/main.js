@@ -1,3 +1,8 @@
 "use strict";
 
-generateBtn.addEventListener("click", () => renderArray(generateArray()));
+window.onload = () => (barArr = [...generateArray()]);
+generateBtn.addEventListener("click", () => (barArr = [...generateArray()]));
+arraySizeInput.addEventListener("input", () => (barArr = [...generateArray()]));
+
+bubbleSortBtn.addEventListener("click", () => bubbleSort(barArr));
+insertionSortBtn.addEventListener("click", () => insertionSort(barArr));

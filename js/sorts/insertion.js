@@ -3,15 +3,25 @@
 function insertionSort(arr) {
   let len = arr.length;
   for (let i = 0; i < len; i++) {
-    let minBar = [arr[i], i];
-    for (let j = i; j < len; j++) {
-      if (arr[j].value < arr[i].value && i !== j) {
-        minBar[0] = arr[j];
-        minBar[1] = j;
-      }
+    let counter = i;
+    updateDiv(arr[i].element, arr[i].height, "yellow");
+    while (
+      counter > 0 &&
+      i > 0 &&
+      arr[counter].height < arr[counter - 1].height
+    ) {
+      updateDiv(arr[counter - 1].element, arr[counter - 1].height, "yellow");
+      updateDiv(arr[counter].element, arr[counter].height, "red");
+      updateDiv(arr[counter - 1].element, arr[counter - 1].height, "red");
+      let temp = arr[counter].height;
+      arr[counter].height = arr[counter - 1].height;
+      arr[counter - 1].height = temp;
+      updateDiv(arr[counter].element, arr[counter].height, "red");
+      updateDiv(arr[counter - 1].element, arr[counter - 1].height, "red");
+      counter--;
+      updateDiv(arr[counter + 1].element, arr[counter + 1].height, "purple");
+      updateDiv(arr[counter].element, arr[counter].height, "yellow");
     }
-    let temp = arr[i];
-    arr[i] = arr[minBar[1]];
-    arr[minBar[1]] = temp;
+    updateDiv(arr[counter].element, arr[counter].height, "purple");
   }
 }

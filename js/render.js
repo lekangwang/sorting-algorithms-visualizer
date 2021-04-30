@@ -1,21 +1,24 @@
 "use strict";
 
-//function to render the passed array to the DOM
-function renderArray(arr) {
-  //clear the array container in the DOM
-  arrayContainer.innerHTML = "";
+//function to update the height and color of each bar div element
+function updateDiv(div, height, color) {
+  const [heightUnit] = calcUnits();
+  setTimeout(() => {
+    div.style.height = height * heightUnit + "px";
+    div.classList.remove("red");
+    div.classList.remove("green");
+    div.classList.remove("blue");
+    div.classList.remove("yellow");
+    div.classList.remove("purple");
+    div.classList.add(`${color}`);
+    div.innerText = `${div.innerText != "" ? height : ""}`;
+  }, (totalDelay += 1000 / +sortSpeedInput.value));
+}
+
+//recalculate height unit and width unit for each div element
+function calcUnits() {
+  const arrLen = +arraySizeInput.value;
   const heightUnit = (arrayContainer.offsetHeight * 0.95) / 100;
-  const widthUnit = (arrayContainer.offsetWidth * 0.9) / arr.length - 4;
-  arr.forEach((bar) => {
-    const html = `<div class="bar-background 
-    ${bar.class}" 
-    style="
-    height: ${heightUnit * bar.value}px;
-    width: ${widthUnit}px;
-    margin: ${2}px;
-    ">
-    <p>${+arraySizeInput.value > 30 ? "" : bar.value}</p>
-    </div>`;
-    arrayContainer.insertAdjacentHTML("afterbegin", html);
-  });
+  const widthUnit = (arrayContainer.offsetWidth * 0.9) / arrLen - 4;
+  return [heightUnit, widthUnit];
 }

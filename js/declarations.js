@@ -19,3 +19,4 @@ const sortSpeedInput = document.getElementById("sort-speed-input");
 
 /*---Containers---*/
 const arrayContainer = document.getElementById("visualizer-bar-container");
+let totalDelay = 0;
