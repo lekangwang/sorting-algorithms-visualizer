@@ -1,6 +1,7 @@
 "use strict";
 
 function insertionSort(arr) {
+  totalDelay = 0;
   let len = arr.length;
   for (let i = 0; i < len; i++) {
     let counter = i;

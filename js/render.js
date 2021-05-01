@@ -12,7 +12,7 @@ function updateDiv(div, height, color) {
     div.classList.remove("purple");
     div.classList.add(`${color}`);
     div.innerText = `${div.innerText != "" ? height : ""}`;
-  }, (totalDelay += 1000 / +sortSpeedInput.value));
+  }, (totalDelay += 500 / +sortSpeedInput.value));
 }
 
 //recalculate height unit and width unit for each div element
