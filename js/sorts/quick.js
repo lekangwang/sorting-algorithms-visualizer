@@ -1,19 +1,19 @@
 "use strict";
 
-function quickSort() {
+function callQuickSort() {
   totalDelay = 0;
-  quickRecurse(0, +arraySizeInput.value - 1);
+  quickSort(0, +arraySizeInput.value - 1);
 }
 
-function quickRecurse(start, end) {
+function quickSort(start, end) {
   if (start < end) {
-    let pivotPos = partition(barArr, start, end);
-    quickRecurse(start, pivotPos - 1);
-    quickRecurse(pivotPos + 1, end);
+    let pivotPos = quickPartition(barArr, start, end);
+    quickSort(start, pivotPos - 1);
+    quickSort(pivotPos + 1, end);
   }
 }
 
-function partition(arr, start, end) {
+function quickPartition(arr, start, end) {
   let i = start + 1;
   let pivot = arr[start];
   updateDiv(pivot.element, pivot.height, "yellow");
