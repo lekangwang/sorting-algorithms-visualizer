@@ -8,11 +8,10 @@
 }
 
 .controls-generate-container {
-  flex: 1;
+  flex: 1.5;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
 }
 
 .controls-parameters-container {
@@ -39,6 +38,13 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 0 1rem;
+}
+
+.controls-start-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .primary-input {

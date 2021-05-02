@@ -1,7 +1,14 @@
 "use strict";
 
-function bubbleSort(arr) {
+function callBubbleSort() {
   totalDelay = 0;
+  bubbleSort(barArr);
+  setTimeout(() => {
+    toggleControls();
+  }, (totalDelay += 500 / +sortSpeedInput.value));
+}
+
+function bubbleSort(arr) {
   const len = arr.length;
   for (let i = len - 1; i >= 0; i--) {
     for (let j = 0; j < i; j++) {

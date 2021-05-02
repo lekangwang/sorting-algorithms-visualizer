@@ -3,6 +3,9 @@
 function callMergeSort() {
   totalDelay = 0;
   mergePartition(barArr, 0, +arraySizeInput.value - 1);
+  setTimeout(() => {
+    toggleControls();
+  }, (totalDelay += 500 / +sortSpeedInput.value));
 }
 
 function mergePartition(arr, start, end) {

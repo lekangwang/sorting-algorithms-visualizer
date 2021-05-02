@@ -8,7 +8,7 @@
     <!--CSS styles-->
     <link rel="stylesheet" href="css/body.css" />
     <link rel="stylesheet" href="css/buttons.css" />
-    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/controls.css" />
     <link rel="stylesheet" href="css/visualizer.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/footer.css" />
@@ -71,16 +71,12 @@
           <button id="heap-sort-btn" class="secondary-btn">Heap Sort</button>
         </div>
       </div>
+      <div class="controls-start-container">
+        <button class="primary-btn" id="start-btn">Sort!</button>
+      </div>
     </header>
     <main class="visualizer">
-      <div class="visualizer-container">
-        <div id="visualizer-bar-container"></div>
-        <div class="visualizer-controls-container">
-          <div><button class="primary-btn" id="start-btn">Sort!</button></div>
-          <div><button class="primary-btn" id="stop-btn">Stop</button></div>
-          <div><button class="primary-btn" id="reset-btn">Reset</button></div>
-        </div>
-      </div>
+      <div id="visualizer-bar-container"></div>
     </main>
     <footer>
       <p>Le Kang Wang &copy; 2021</p>
@@ -88,6 +84,8 @@
 
     <!--JS Scripts-->
     <script src="js/declarations.js"></script>
+    <script src="js/pick-algorithm.js"></script>
+    <script src="js/toggle.js"></script>
     <script src="js/render.js"></script>
     <script src="js/generate.js"></script>
     <script src="js/sorts/bubble.js"></script>

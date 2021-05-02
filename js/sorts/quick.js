@@ -3,6 +3,9 @@
 function callQuickSort() {
   totalDelay = 0;
   quickSort(0, +arraySizeInput.value - 1);
+  setTimeout(() => {
+    toggleControls();
+  }, (totalDelay += 500 / +sortSpeedInput.value));
 }
 
 function quickSort(start, end) {

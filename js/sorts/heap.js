@@ -3,6 +3,9 @@
 function callHeapSort() {
   totalDelay = 0;
   heapSort(barArr);
+  setTimeout(() => {
+    toggleControls();
+  }, (totalDelay += 500 / +sortSpeedInput.value));
 }
 
 function heapSort(arr) {
@@ -12,7 +15,7 @@ function heapSort(arr) {
   }
 
   //sort the array
-  for (let i = arr.length - 1; i > 0; i--) {
+  for (let i = arr.length - 1; i >= 0; i--) {
     swap(arr, 0, i);
     updateDiv(arr[i].element, arr[i].height, "purple");
     updateDiv(arr[i].element, arr[i].height, "yellow");
@@ -22,7 +25,6 @@ function heapSort(arr) {
     updateDiv(arr[i].element, arr[i].height, "blue");
     updateDiv(arr[i].element, arr[i].height, "purple");
   }
-  updateDiv(arr[i].element, arr[i].height, "purple");
 }
 
 function swap(arr, i, j) {

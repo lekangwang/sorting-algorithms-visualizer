@@ -1,5 +1,13 @@
 "use strict";
 
+function callInsertionSort() {
+  totalDelay = 0;
+  insertionSort(barArr);
+  setTimeout(() => {
+    toggleControls();
+  }, (totalDelay += 500 / +sortSpeedInput.value));
+}
+
 function insertionSort(arr) {
   totalDelay = 0;
   let len = arr.length;
