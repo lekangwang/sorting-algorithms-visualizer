@@ -7,3 +7,4 @@ arraySizeInput.addEventListener("input", () => (barArr = [...generateArray()]));
 bubbleSortBtn.addEventListener("click", () => bubbleSort(barArr));
 insertionSortBtn.addEventListener("click", () => insertionSort(barArr));
 quickSortBtn.addEventListener("click", () => quickSort());
+heapSortBtn.addEventListener("click", () => heapSort(barArr));
