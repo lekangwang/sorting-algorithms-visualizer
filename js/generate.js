@@ -7,9 +7,8 @@ let barArr = [];
 //push objects representing each bar (element, color, height)
 function generateArray() {
   totalDelay = 0;
-  arrayContainer.innerHTML = ""; //clear the array container div
+  arrayContainer.innerHTML = "";
   const barArr = []; //clear the global bar array
-  //link max and min values with HTML input attribute
   const min = +arraySizeInput.getAttribute("min");
   const max = +arraySizeInput.getAttribute("max");
   const arrLen = +arraySizeInput.value;
@@ -22,6 +21,7 @@ function generateArray() {
       element: null,
       height: Math.floor(Math.random() * (max - min)) + min,
     };
+
     //create and style a bar wrapper div
     const barElement = document.createElement("div");
     barElement.setAttribute("class", `bar-background ${obj.color}`);

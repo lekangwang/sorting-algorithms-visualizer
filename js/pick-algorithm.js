@@ -1,20 +1,15 @@
 "use strict";
 
-//add event listeners to each algorithm choice
-//button to only allow one button to be pressed
-//at a time
-sortAlgoArr.forEach((sort, i, arr) => {
-  sort.addEventListener("click", () => {
-    for (let sort of arr) {
-      if (sort.classList.contains("pressed")) {
-        sort.classList.remove("pressed");
-      }
-    }
-    sort.classList.add("pressed");
-  });
+//add event listeners to each sorting algorithm button
+//to only allow one button to be pressed at any given time
+sortBtnContainer.addEventListener("click", function (e) {
+  if (!e.target.classList.contains("sorting-algo-btn")) return;
+  const sortAlgoArr = uiComponentsArr.slice(0, 5);
+  sortAlgoArr.forEach((btn) => btn.classList.remove("pressed"));
+  e.target.classList.add("pressed");
 });
 
-//check which algorithm was picked returns the corresponding function
+//checks which algorithm was picked and returns the corresponding start function
 function pickAlgorithm() {
   let sortFunc = {
     0: callBubbleSort,
@@ -23,6 +18,8 @@ function pickAlgorithm() {
     3: callMergeSort,
     4: callHeapSort,
   };
+
+  const sortAlgoArr = uiComponentsArr.slice(0, 5);
   for (let [i, algo] of Object.entries(sortAlgoArr)) {
     if (algo.classList.contains("pressed")) {
       return sortFunc[i];

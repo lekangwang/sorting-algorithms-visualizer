@@ -15,7 +15,7 @@ function updateDiv(div, height, color) {
   }, (totalDelay += 500 / +sortSpeedInput.value));
 }
 
-//recalculate height unit and width unit for each div element
+//recalculate height unit and width unit for each div element in pixels
 function calcUnits() {
   const arrLen = +arraySizeInput.value;
   const heightUnit = (arrayContainer.offsetHeight * 0.95) / 100;
