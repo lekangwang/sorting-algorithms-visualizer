@@ -25,4 +25,6 @@ function pickAlgorithm() {
       return sortFunc[i];
     }
   }
+  sortAlgoArr[0].classList.add("pressed");
+  return sortFunc[0];
 }
